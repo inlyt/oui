@@ -21,19 +21,17 @@
 [ubus]: https://wiki.openwrt.org/doc/techref/ubus
 [uhttpd-mod-ubus]: https://wiki.openwrt.org/doc/techref/ubus#access_to_ubus_over_http
 
-![](/screenshots.png)
+![](/screenshots_zh.png)
 
 OpenWrt后台管理界面，使用[vue.js]和[element-ui]实现，灵感来自于[LuCI2]。
 
 oui使用[json-rpc]和OpenWrt子系统通信。通过[json-rpc]调用[ubus]。通过[ubus]存取各种系统数据(通过[uhttpd-mod-ubus]提供基于HTTP的接口API)。
 
-# [捐赠](https://gitee.com/zhaojh329/oui#project-donate-overview)
+# TODO
 
-* 深圳市云联芯科技有限公司 - 400¥
-* 北京钛铂云老戴 - 200¥
-* JunoSky - 100¥
-* 许玉善(北京友联智诚科技有限公司) - 100¥
-* lemon - 10¥
+* 动态切换主题
+
+# [捐赠](https://gitee.com/zhaojh329/oui#project-donate-overview)
 
 # 贡献代码
 如果你想帮助[oui](https://github.com/zhaojh329/oui) 变得更好，请参考

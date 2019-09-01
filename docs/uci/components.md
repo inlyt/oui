@@ -14,6 +14,7 @@ Represents a uci configuration file. Other components must be wrapped by this co
 | config    | uci configuration file  | string   | — | — |
 | tabbed    | Render each uci-section into a tab page | boolean | — | false |
 | after-loaded | hook function after uci loading is completed | Function() | — | — |
+| apply-timeout | timeout for apply(second) | number |  — | 10 |
 
 ### Events
 | Name   | Description         | Parameters   |
@@ -206,6 +207,18 @@ Equivalent to
 <uci-option-dummy label="名称" name="name"></uci-option-dummy>
 ```
 
+``` vue
+<uci-option label="名称" name="name">
+  <template v-slot="props">
+    <el-input v-model="props.self.form[props.prop]"></el-input>
+  </template>
+</uci-option>
+```
+Equivalent to
+``` vue
+<uci-option-input label="名称" name="name"></uci-option-input>
+```
+
 ## uci-option-dummy
 
 Used only to display values, not for editing.
@@ -224,6 +237,7 @@ Used for editable uci options.
 | placeholder | placeholder | string | — | — |
 | password | toggleable password input | boolean | — | false |
 | append | content to append after Input | string | — | — |
+| suggestions | recommended tips | array | — | — |
 
 ### content to append after Input
 
@@ -265,3 +279,4 @@ Dynamic list. Corresponds to the list in the uci configuration.
 | Name        | Description        | Type      | Accepted Values       | Default  |
 |------------ |------------ |---------- |-------------|-------- |
 | initial | initial value | array | — | — |
+| suggestions | recommended tips | array | — | — |
